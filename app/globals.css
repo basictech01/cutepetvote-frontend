@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* This is necessary for @layer utilities to work */
+
+@layer utilities {
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        /* Hides scrollbar in IE and Edge */
+        scrollbar-width: none;
+        /* Hides scrollbar in Firefox */
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+        /* Hides scrollbar in WebKit-based browsers */
+    }
+}
