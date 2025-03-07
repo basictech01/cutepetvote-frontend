@@ -29,6 +29,9 @@ export default function FeaturedSection() {
         fetchParticipants();
     }, [backendUrl]);
 
+    if (participants.length == 0) {
+        return <></>
+    }
     return (
         <section className="w-full mb-6">
             <div className="bg-white rounded-lg p-4">

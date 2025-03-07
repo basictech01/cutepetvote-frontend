@@ -14,31 +14,31 @@ interface Participant {
 }
 
 const petData = [
-    {
-        name: "Poppi",
-        imageUrl: "/placeholder.svg",
-        votes: 179,
-        isNewParticipant: true,
-        showHeader: true,
-    },
-    {
-        name: "Autumn",
-        imageUrl: "/placeholder.svg",
-        votes: 16,
-        rank: 2723,
-        description:
-            "Autumn is such a precious little girl. Super smart, funny, loves to eat hehe. She's loves to give kisses and hugs and loves her sisters.",
-        isNewParticipant: false,
-    },
-    {
-        name: "Eveline",
-        imageUrl: "/placeholder.svg",
-        votes: 57,
-        rank: 1959,
-        description:
-            "Eveline was born 2/6/25 after 3 days of trying to induce me (issues with preeclampsia). She's a very bright baby girl. As soon as she was born, she impressed everyone with her strong head move...",
-        isNewParticipant: false,
-    },
+    // {
+    //     name: "Poppi",
+    //     imageUrl: "/placeholder.svg",
+    //     votes: 179,
+    //     isNewParticipant: true,
+    //     showHeader: true,
+    // },
+    // {
+    //     name: "Autumn",
+    //     imageUrl: "/placeholder.svg",
+    //     votes: 16,
+    //     rank: 2723,
+    //     description:
+    //         "Autumn is such a precious little girl. Super smart, funny, loves to eat hehe. She's loves to give kisses and hugs and loves her sisters.",
+    //     isNewParticipant: false,
+    // },
+    // {
+    //     name: "Eveline",
+    //     imageUrl: "/placeholder.svg",
+    //     votes: 57,
+    //     rank: 1959,
+    //     description:
+    //         "Eveline was born 2/6/25 after 3 days of trying to induce me (issues with preeclampsia). She's a very bright baby girl. As soon as she was born, she impressed everyone with her strong head move...",
+    //     isNewParticipant: false,
+    // },
 ]
 
 export default function VotingSection() {
@@ -62,39 +62,39 @@ export default function VotingSection() {
 
     return (
         <section className="w-full mb-6">
-            <div className="bg-gray-100 p-4 rounded-lg">
-                <h3 className="text-3xl font-bold text-center mb-2">Help them get their first votes!</h3>
-                <p className="text-amber-500 text-center text-xl mb-4">Start voting right now:</p>
 
-                {
-                    bottomParticipants.length > 0 ?
+            {
+                // <div className="bg-gray-100 p-4 rounded-lg">
+                // <h3 className="text-3xl font-bold text-center mb-2">Help them get their first votes!</h3>
+                //     <p className="text-amber-500 text-center text-xl mb-4">Start voting right now:</p>
+                //     bottomParticipants.length > 0 ?
+                //
+                //         <PetCard votes={bottomParticipants[0].voteCount} name={bottomParticipants[0].petName} imageUrl={bottomParticipants[0].photo} showHeader={true} isNewParticipant={true} />
+                //         :
+                //
+                //         <PetCard {...petData[0]} />
 
-                        <PetCard votes={bottomParticipants[0].voteCount} name={bottomParticipants[0].petName} imageUrl={bottomParticipants[0].photo} showHeader={true} isNewParticipant={true} />
-                        :
+                //     <div className="flex justify-center my-6">
+                //         <div className="relative w-full max-w-3/4 h-[300px]">
+                //             <Image src="/img2.png" alt="Pet winners illustration with trophy" fill className="object-contain" />
+                //         </div>
+                //     </div>
+                //
+                //     <div className="text-center mb-3">
+                //         <h3 className="text-4xl  font-bold">Meet</h3>
+                //         <h3 className="text-4xl font-bold">Last Month&apos;s</h3>
+                //         <p className="text-green-500 text-3xl font-bold">Winner</p>
+                //     </div>
+                //
+                //     <button className="w-full bg-amber-400 text-white font-bold py-3 rounded-2xl">VIEW ALL WINNERS</button>
+                // </div>
 
-                        <PetCard {...petData[0]} />
-                }
-
-                <div className="flex justify-center my-6">
-                    <div className="relative w-full max-w-3/4 h-[300px]">
-                        <Image src="/img2.png" alt="Pet winners illustration with trophy" fill className="object-contain" />
-                    </div>
-                </div>
-
-                <div className="text-center mb-3">
-                    <h3 className="text-4xl  font-bold">Meet</h3>
-                    <h3 className="text-4xl font-bold">Last Month&apos;s</h3>
-                    <p className="text-green-500 text-3xl font-bold">Winner</p>
-                </div>
-
-                <button className="w-full bg-amber-400 text-white font-bold py-3 rounded-2xl">VIEW ALL WINNERS</button>
-            </div>
-
-            <div className="space-y-4 mt-6">
-                {petData.slice(1).map((pet, index) => (
-                    <PetCard key={index} {...pet} />
-                ))}
-            </div>
+                // <div className="space-y-4 mt-6">
+                //     {petData.slice(1).map((pet, index) => (
+                //         <PetCard key={index} {...pet} />
+                //     ))}
+                // </div>
+            }
 
             <div className="bg-purple-100 p-4 rounded-lg text-center mt-6">
                 <p className="text-purple-900 font-medium">
